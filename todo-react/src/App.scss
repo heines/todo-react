@@ -1,4 +1,22 @@
-.App {
+.todo-list {
+  margin-top: 1rem;
+  text-align: left;
+  list-style: none;
+}
+
+.todo-item {
+  font-family: monospace;
+  cursor: pointer;
+  line-height: 1.5;
+  &__text {
+    &--completed {
+      text-decoration:  line-through;
+      color: #A9BCD0;
+    }
+  }
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -19,4 +37,4 @@
 
 .App-link {
   color: #A9BCD0;
-}
+} */
