@@ -8,9 +8,12 @@ import rootReducer from './reducers';
 
 const store = createStore(rootReducer);
 
+// Providerの目的は2つ
+// 1 Reactコンポーネント内でreact-reduxのconnect()関数を使えるようにすること
+// 2 ラップしたコンポーネントにstore情報を渡すこと
 render(
   <Provider store={store}>
-	 <App />
+    <App />
   </Provider>,
-	document.getElementById('root')
+  document.getElementById('root')
 );
