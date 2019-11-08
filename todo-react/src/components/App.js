@@ -5,6 +5,7 @@ import Form from './Form';
 
 import AddTodo from './AddTodo';
 import TodoList from './TodoList';
+import Footer from './Footer';
 
 // export default class App extends Component {
 //   render() {
@@ -21,8 +22,10 @@ import TodoList from './TodoList';
 
 const App = () => (
   <div>
+    <Clock />
     <AddTodo />
     <TodoList />
+    <Footer />
   </div>
 )
 

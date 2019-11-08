@@ -1,9 +1,13 @@
 import React from 'react';
+import classNames from 'classnames';
 
 const Todo = ({ onClick, completed, text }) => (
   <li
     onClick={onClick}
-    className={'todo-item' + (completed ? ' todo-item__text--completed' : '')}
+    className={classNames(
+        "todo-item__text",
+        {"todo-item__text--completed" : completed}
+    )}
   >
     {completed ? "👌" : "👋"}{" "}
     <span>
