@@ -7,19 +7,6 @@ import AddTodo from './AddTodo';
 import TodoList from './TodoList';
 import Footer from './Footer';
 
-// export default class App extends Component {
-//   render() {
-//     return (
-//       <div className="App">
-//         <header className="App-header">
-//           <Clock />
-//           <Form />
-//         </header>
-//       </div>
-//     );
-//   }
-// }
-
 const App = () => (
   <div>
     <Clock />
@@ -31,4 +18,4 @@ const App = () => (
 
 export default App;
 
-// http://www.fumiononaka.com/Business/html5/FN1908003.html
+// http://www.fumiononaka.com/Business/html5/FN1908005.html
