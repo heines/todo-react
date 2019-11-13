@@ -9,6 +9,7 @@
     height: 12vw;
     width: 1vw;
     position: absolute;
+    border-radius: 50%;
     top: 3vw;
     left: (15vw - 0.5vw);
     background: #373F51;
@@ -17,16 +18,18 @@
     height: 7vw;
     width: 1.1vw;
     position: absolute;
+    border-radius: 50%;
     top: 8vw;
     left: (15vw - 0.55vw);
-    background: #58A4B0;
+    background: #373F51;
   }
   &-secondhand {
-    height: 14vw;
-    width: 0.5vw;
+    height: 13vw;
+    width: 0.2vw;
     position: absolute;
-    top: 1vw;
-    left: (15vw - 0.25vw);
-    background: #A9BCD0;
+    top: 2vw;
+    left: (15vw - 0.1vw);
+    background: #58A4B0;
+    // background: #A9BCD0;
   }
 }
