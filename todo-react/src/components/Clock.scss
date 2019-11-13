@@ -1,10 +1,33 @@
+@import './Math.scss';
+
 .Clock {
   width: 30vw;
   height: 30vw;
   position: relative;
   background: #D8DBE2;
   border-radius: 50%;
-
+  @for $i from 1 through 12 {
+    &__#{$i} {
+      $sdeg : sin((360deg / 12 * $i) - 90deg);
+      $cdeg : cos((360deg / 12 * $i) - 90deg);
+      position: absolute;
+      top: calc(#{$sdeg} * 14vw + 14vw);
+      left: calc(#{$cdeg} * 14vw + 14.5vw);
+      content: '';
+      transform: rotate( 360deg / 12 * $i);
+      color: #888;
+    }
+  }
+  &__center {
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: calc(50% - 2px);
+    content: '';
+    border-radius: 50px;
+    background-color: #222;
+  }
   &-longhand {
     height: 12vw;
     width: 1vw;
@@ -15,11 +38,11 @@
     background: #373F51;
   }
   &-shorthand {
-    height: 7vw;
+    height: 10vw;
     width: 1.1vw;
     position: absolute;
     border-radius: 50%;
-    top: 8vw;
+    top: 5vw;
     left: (15vw - 0.55vw);
     background: #373F51;
   }
