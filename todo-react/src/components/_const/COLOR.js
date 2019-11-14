@@ -3,5 +3,5 @@ export default {
   SUB: '#A9BCD0',
   BASE: '#D8DBE2',
   TEXT: '#373F51',
-  TEXT2: '#FFF',
+  TEXT2: '#FFFFFF',
 };
