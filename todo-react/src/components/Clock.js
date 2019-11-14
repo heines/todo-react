@@ -67,13 +67,20 @@ export default class Clock extends React.Component {
     });
   }
 
+  handleClick(e) {
+    e.preventDefault();
+  }
+
   render() {
     let list = [];
     for(var i=1; i<13; i++) {
       list.push(<div className={`Clock__${i}`} key={`${i}`}>{i}</div>);
     }
     return (
-      <div className="Clock">
+      <div
+        className="Clock"
+        onClick={this.handleClick}
+      >
         {list}
         <MovementHours date={this.state.date} />
         <MovementMinutes date={this.state.date} />
