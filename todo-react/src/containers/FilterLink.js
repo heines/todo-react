@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { setVisibilityFilter } from '../actions';
 import Link from '../components/Link';
+import styled from 'styled-components';
 
 // state は　reduxで管理している全てのstateを持っている
 // ownPropsはconnectしたcomponent本来のpropsを取得する
