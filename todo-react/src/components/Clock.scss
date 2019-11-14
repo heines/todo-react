@@ -19,35 +19,34 @@
       font-size: 0.5em;
     }
   }
-  &__center {
-    width: 4px;
-    height: 4px;
-    position: absolute;
-    top: calc(50% - 2px);
-    left: calc(50% - 2px);
-    content: '';
-    border-radius: 50px;
-    background-color: #222;
-  }
-  &-longhand {
+  &__minutehand {
     height: 12vw;
     width: 1vw;
     position: absolute;
-    border-radius: 50%;
     top: 3vw;
     left: (15vw - 0.5vw);
     background: #373F51;
   }
-  &-shorthand {
-    height: 10vw;
-    width: 1.1vw;
+  &__hourhand {
+    height: 9vw;
+    width: 1vw;
     position: absolute;
-    border-radius: 50%;
-    top: 5vw;
-    left: (15vw - 0.55vw);
+    top: 6vw;
+    left: (15vw - 0.5vw);
     background: #373F51;
   }
-  &-secondhand {
+  &__hourhand, &__minutehand {
+    &-center {
+      width: 1.5vw;
+      height: 1.5vw;
+      position: absolute;
+      border-radius: 50%;
+      top: 14.25vw;
+      left: 14.25vw;
+      background: #373F51;
+    }
+  }
+  &__secondhand {
     height: 14vw;
     width: 0.2vw;
     position: absolute;
@@ -55,5 +54,14 @@
     left: (15vw - 0.1vw);
     background: #58A4B0;
     // background: #A9BCD0;
+    &-center {
+      width: 1vw;
+      height: 1vw;
+      position: absolute;
+      border-radius: 50%;
+      top: 14.5vw;
+      left: 14.5vw;
+      background: #58A4B0;
+    }
   }
 }

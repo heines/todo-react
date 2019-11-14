@@ -1,39 +1,46 @@
 import './Clock.scss';
 import React from 'react';
 
-function MovementSeconds(props) {
-  let secondDeg = props.date.getSeconds() * 6;
+function MovementHours(props) {
+  let shortDeg = props.date.getHours() > 12 ? ((props.date.getHours() - 12) * 30) : (props.date.getHours() * 30);
+  shortDeg += props.date.getMinutes() * 0.5;
   return (
-    <div
-      id="second"
-      className="Clock-secondhand"
-      style={{ transform: `rotate(${secondDeg}deg)`, transformOrigin: 'center 13vw' }}
-    ></div>
-  )
+    <div>
+      <div
+        className="Clock__hourhand"
+        style={{ transform: `rotate(${shortDeg}deg)`, transformOrigin: 'center bottom' }}
+      ></div>
+      <div className="Clock__hour-center"></div>
+    </div>
+  );
 }
 
 function MovementMinutes(props) {
   let longDeg = props.date.getMinutes() * 6;
   return (
-    <div
-      id="long"
-      className="Clock-longhand"
-      style={{ transform: `rotate(${longDeg}deg)`, transformOrigin: 'bottom' }}
-    ></div>
+    <div>
+      <div
+        className="Clock__minutehand"
+        style={{ transform: `rotate(${longDeg}deg)`, transformOrigin: 'center bottom' }}
+      ></div>
+      <div className="Clock__minutehand-center"></div>
+    </div>
+  );
+}
+
+function MovementSeconds(props) {
+  let secondDeg = props.date.getSeconds() * 6;
+  return (
+    <div>
+      <div
+        className="Clock__secondhand"
+        style={{ transform: `rotate(${secondDeg}deg)`, transformOrigin: 'center 13vw' }}
+      ></div>
+      <div className="Clock__secondhand-center"></div>
+    </div>
   )
 }
 
-function MovementHours(props) {
-  let shortDeg = props.date.getHours() > 12 ? ((props.date.getHours() - 12) * 30) : (props.date.getHours() * 30);
-  shortDeg += props.date.getMinutes() * 0.5;
-  return (
-    <div
-      id="short"
-      className="Clock-shorthand"
-      style={{ transform: `rotate(${shortDeg}deg)`, transformOrigin: 'bottom' }}
-    ></div>
-  );
-}
 
 export default class Clock extends React.Component {
   constructor(props) {
