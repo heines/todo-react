@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setVisibilityFilter } from '../actions';
+import PropTypes from 'prop-types';
 
 const Link = ({ active, children, onClick }) => (
   <button
@@ -23,6 +24,12 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
 	onClick: () => dispatch(setVisibilityFilter(ownProps.filter))
 });
+
+Link.propTypes = {
+  active: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired
+};
 
 // 第一引数はcomponentに渡すpropsを制御する
 // 第二引数はreducerを呼び出して、reduxで管理しているstateを更新する
