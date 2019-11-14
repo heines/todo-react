@@ -1,7 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Todo from './Todo';
-import { toggleTodo, VisibilityFilters } from '../actions';
 import PropTypes from 'prop-types';
 
 const TodoList = ({ todos, toggleTodo }) => (
@@ -16,26 +14,6 @@ const TodoList = ({ todos, toggleTodo }) => (
   </ul>
 );
 
-const getVisibleTodos = (todos, filter) => {
-  switch (filter) {
-    case VisibilityFilters.SHOW_ALL:
-      return todos;
-    case VisibilityFilters.SHOW_COMPLETED:
-      return todos.filter(t => t.completed);
-    case VisibilityFilters.SHOW_ACTIVE:
-      return todos.filter(t => !t.completed);
-    default:
-      throw new Error('Unknown filter: ' + filter);
-  }
-}
-
-const mapStateToProps = (state) => ({
-  todos: getVisibleTodos(state.todos, state.visibilityFilter)
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  toggleTodo: (id) => dispatch(toggleTodo(id))
-});
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
@@ -46,7 +24,4 @@ TodoList.propTypes = {
   toggleTodo: PropTypes.func.isRequired
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TodoList);
+export default TodoList;

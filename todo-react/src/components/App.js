@@ -3,15 +3,15 @@ import React from 'react';
 import Clock from './Clock';
 import Form from './Form';
 
-import AddTodo from './AddTodo';
-import TodoList from './TodoList';
+import AddTodo from '../containers/AddTodo';
+import VisibleTodoList from '../containers/VisibleTodoList';
 import Footer from './Footer';
 
 const App = () => (
   <div>
     <Clock />
     <AddTodo />
-    <TodoList />
+    <VisibleTodoList />
     <Footer />
   </div>
 )
