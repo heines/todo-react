@@ -10,7 +10,7 @@ const Todo = ({ onClick, completed, text }) => (
         {"todo-item__text--completed" : completed}
     )}
   >
-    {completed ? "👌" : "👋"}{" "}
+    {completed ? "✔︎" : "◻️"}{" "}
     <span>
       {text}
     </span>
