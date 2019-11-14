@@ -70,9 +70,8 @@ export default class Clock extends React.Component {
   render() {
     let list = [];
     for(var i=1; i<13; i++) {
-      list.push(<div className={`Clock__${i}`}>{i}</div>);
+      list.push(<div className={`Clock__${i}`} key={`${i}`}>{i}</div>);
     }
-    console.log(list);
     return (
       <div className="Clock">
         {list}
