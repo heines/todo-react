@@ -7,7 +7,7 @@ function MovementSeconds(props) {
     <div
       id="second"
       className="Clock-secondhand"
-      style={{ transform: `rotate(${secondDeg}deg)`, transformOrigin: 'bottom' }}
+      style={{ transform: `rotate(${secondDeg}deg)`, transformOrigin: 'center 13vw' }}
     ></div>
   )
 }

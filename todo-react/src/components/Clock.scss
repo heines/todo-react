@@ -11,11 +11,12 @@
       $sdeg : sin((360deg / 12 * $i) - 90deg);
       $cdeg : cos((360deg / 12 * $i) - 90deg);
       position: absolute;
-      top: calc(#{$sdeg} * 14vw + 14vw);
-      left: calc(#{$cdeg} * 14vw + 14.5vw);
+      top: calc(#{$sdeg} * 13vw + 15vw - 0.5em);
+      left: calc(#{$cdeg} * 13vw + 15vw - 0.5em);
       content: '';
       transform: rotate( 360deg / 12 * $i);
       color: #888;
+      font-size: 0.5em;
     }
   }
   &__center {
@@ -47,7 +48,7 @@
     background: #373F51;
   }
   &-secondhand {
-    height: 13vw;
+    height: 14vw;
     width: 0.2vw;
     position: absolute;
     top: 2vw;
