@@ -27,6 +27,7 @@
     top: 3vw;
     left: (15vw - 0.5vw);
     background: #373F51;
+    transform-origin: center bottom;
   }
   &__hourhand {
     height: 9vw;
@@ -35,6 +36,7 @@
     top: 6vw;
     left: (15vw - 0.5vw);
     background: #373F51;
+    transform-origin: center bottom;
   }
   &__hourhand, &__minutehand {
     &-center {
@@ -55,6 +57,7 @@
     left: (15vw - 0.1vw);
     background: #58A4B0;
     // background: #A9BCD0;
+    transform-origin: center 13vw;
     &-center {
       width: 1vw;
       height: 1vw;

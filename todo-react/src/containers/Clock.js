@@ -8,7 +8,7 @@ function MovementHours(props) {
     <div>
       <div
         className="Clock__hourhand"
-        style={{ transform: `rotate(${shortDeg}deg)`, transformOrigin: 'center bottom' }}
+        style={{ transform: `rotate(${shortDeg}deg)` }}
       ></div>
       <div className="Clock__hour-center"></div>
     </div>
@@ -21,7 +21,7 @@ function MovementMinutes(props) {
     <div>
       <div
         className="Clock__minutehand"
-        style={{ transform: `rotate(${longDeg}deg)`, transformOrigin: 'center bottom' }}
+        style={{ transform: `rotate(${longDeg}deg)` }}
       ></div>
       <div className="Clock__minutehand-center"></div>
     </div>
@@ -34,7 +34,7 @@ function MovementSeconds(props) {
     <div>
       <div
         className="Clock__secondhand"
-        style={{ transform: `rotate(${secondDeg}deg)`, transformOrigin: 'center 13vw' }}
+        style={{ transform: `rotate(${secondDeg}deg)` }}
       ></div>
       <div className="Clock__secondhand-center"></div>
     </div>
@@ -67,8 +67,8 @@ export default class Clock extends React.Component {
     });
   }
 
-  handleClick(e) {
-    e.preventDefault();
+  handleClick = () => {
+    console.log(this.state.date);
   }
 
   render() {
