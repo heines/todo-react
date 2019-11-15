@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import COLOR from './_const/COLOR';
 import styled from 'styled-components';
+import moment from 'moment';
 
 const Todo = styled.li`
   font-family: monospace;
@@ -22,7 +23,7 @@ const StyledTodo = ({ onClick, completed, text }) => (
   >
     {completed ? "✔︎" : "・"}{" "}
     <span>
-      {text}
+      {text}: {moment().format('YY/MM/DD h:mm')}
     </span>
   </Todo>
 );
