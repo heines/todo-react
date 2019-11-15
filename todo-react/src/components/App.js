@@ -1,7 +1,6 @@
 import '../App.scss';
 import React from 'react';
-import Clock from './Clock';
-
+import Clock from '../containers/Clock';
 import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
 import Footer from './Footer';
