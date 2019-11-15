@@ -4,6 +4,7 @@ import { addTodo } from '../actions';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import COLOR from '../components/_const/COLOR';
+import Modal from '../components/Modal';
 
 const AddTodo = styled.form`
   padding-top: 1.1em;
@@ -27,7 +28,8 @@ const AddTodo = styled.form`
 const StyledAddTodo = ({ dispatch }) => {
   let input;
   return (
-    <div>
+    <Modal
+    >
       <AddTodo onSubmit={
         (event) => {
           // React では false を返してもデフォルトの動作を抑止することができません。明示的に preventDefault を呼び出す必要があります。
@@ -43,11 +45,13 @@ const StyledAddTodo = ({ dispatch }) => {
         }
       }>
         <input ref={(element) => input = element} />
-        <button type="submit">
+        <button
+          type="submit"
+        >
           Add Todo
         </button>
       </AddTodo>
-    </div>
+    </Modal>
   );
 };
 
